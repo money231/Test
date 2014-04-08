@@ -58,25 +58,7 @@ public class MainActivity extends Activity{
 			}
 		});
 		
-		messageBtn.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				EditText sendCall=(EditText)findViewById(R.id.text);
-				String callNumber=sendCall.getText().toString();
-				
-				callNumber="smsto:"+callNumber;
-				
-				EditText sendSms=(EditText)findViewById(R.id.text2);
-				String sendMessage=sendSms.getText().toString();
-				
-				Intent intent=new Intent(Intent.ACTION_SENDTO,Uri.parse(callNumber));
-				
-				intent.putExtra("send_sms", sendMessage);
-				startActivity(intent);
-			}
-		});
+	
 		
 		
 	}
